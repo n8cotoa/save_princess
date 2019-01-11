@@ -12,31 +12,31 @@ def displayPathtoPrincess(n,grid)
     end
   end
   output = ""
-
-    i = 0
-    until i == 2
-      while m_position[i] != p_position[i]
-        if m_position[i] > p_position[i]
-          m_position[i] -= 1
-          case i 
-          when 0
-            output += "UP \n"
-          when 1
-            output += "LEFT \n"
-          end
-        else
-          m_position[i] += 1
-          case i
-          when 0
-            output += "DOWN \n"
-          when 1
-            output += "RIGHT \n"
-          end
+  i = 0
+  until i == 2
+    while m_position[i] != p_position[i]
+      if m_position[i] > p_position[i]
+        m_position[i] -= 1
+        case i 
+        when 0
+          output += "UP\n"
+        when 1
+          output += "LEFT\n"
+        end
+      else
+        m_position[i] += 1
+        case i
+        when 0
+          output += "DOWN\n"
+        when 1
+          output += "RIGHT\n"
         end
       end
-      i += 1
     end
-    print output
+    i += 1
+  end
+  print output
+  return output
 end
 
 m = gets.to_i
@@ -47,4 +47,4 @@ grid = Array.new(m)
     grid[i] = gets.strip
 end
 
-displayPathtoPrincess(m,grid)
+print displayPathtoPrincess(m,grid)
