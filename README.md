@@ -15,12 +15,11 @@ Responses to the two provided HackerRank challenges: Bot saves princess and Bot 
 ### Installing
 
 * Clone repository
-* Run `bundle install` in cloned directory
+* Run `bundle install` in project directory
 
 ### Executing program
 
 #### In HackerRack
-I had to add a print before the final function on both of the challenges to get them to score properly in the HackerRank submission field.
 
 For Bot saves princess: 
 * Copy the entirety of save_princess.rb into HackerRank submission field.
@@ -33,6 +32,8 @@ For Bot saves princess - 2:
 #### In Terminal
 
 * Go to project directory
+* Movie into lib directory
+
 * To run 'Bot saves princess', execute:
 ```
 ruby save_princess.rb
@@ -46,6 +47,9 @@ p--
 ```
 * The terminal will out put the moves to save the princess
 
+
+* Go to project directory
+* Movie into lib directory
 * To run 'Bot saves princess - 2, execute: 
 ```
 ruby save_princess_two.rb

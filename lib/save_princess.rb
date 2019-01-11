@@ -34,6 +34,7 @@ def displayPathtoPrincess(n,grid)
     end
     i += 1
   end
+  print output
   return output
 end
 
@@ -45,4 +46,4 @@ grid = Array.new(m)
     grid[i] = gets.strip
 end
 
-print displayPathtoPrincess(m,grid)
+displayPathtoPrincess(m,grid)
