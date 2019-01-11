@@ -66,6 +66,15 @@ p--m-
 ```
 * The terminal will output the next move the bot will make on its way to save the princess
 
+### Testing
+
+* Move into project root directory
+* In terminal run:
+```
+rpsec
+```
+* Hit enter until
+
 ## Authors
 
 Contributors names and contact info
