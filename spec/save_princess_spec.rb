@@ -13,6 +13,6 @@ describe('#save_princess') do
     it("returns path of bot to princess") do
         m = 3
         grid = ['---', '-m-', 'p--']
-        expect(displayPathtoPrincess(m, grid)).to(eq("DOWN\nLEFT\n"))
+        expect { displayPathtoPrincess(m,grid) }.to output("DOWN\nLEFT\n").to_stdout
     end
 end

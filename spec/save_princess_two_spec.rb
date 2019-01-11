@@ -16,6 +16,6 @@ describe('#save_princess_two') do
                 'p--m-',
                 '-----',
                 '-----']
-        expect(nextMove(5, 2, 3, grid)).to(eq("LEFT\n"))
+        expect { nextMove(5, 2, 3, grid) }.to output("LEFT\n").to_stdout
     end
 end

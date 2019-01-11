@@ -22,21 +22,20 @@ Responses to the two provided HackerRank challenges: Bot saves princess and Bot 
 #### In HackerRack
 
 For Bot saves princess: 
-* Copy the entirety of save_princess.rb into HackerRank submission field.
+* Copy the methods in save_princess.rb and paste above the first gets method in the HackerRank submission field.
 * Click Submit
 
 For Bot saves princess - 2:
-* Copy the entirety of save_princess_two.rb into HackerRank submission field.
+* Copy the methods in save_princess_two.rb and paste above the first gets method in the HackerRank submission field.
 * Click Submit
 
 #### In Terminal
 
 * Go to project directory
-* Movie into lib directory
 
 * To run 'Bot saves princess', execute:
 ```
-ruby save_princess.rb
+ruby play_save_princess.rb
 ```
 * Input the grid size and grid using the following format (feel free to play the Princess in any of the four corners):
 ```
@@ -45,14 +44,13 @@ ruby save_princess.rb
 -m-
 p--
 ```
-* The terminal will out put the moves to save the princess
+* The terminal will output the moves to save the princess
 
 
 * Go to project directory
-* Movie into lib directory
 * To run 'Bot saves princess - 2, execute: 
 ```
-ruby save_princess_two.rb
+ruby play_save_princess_two.rb
 ```
 * Input the grid size, row and column position of the bot, and the grid in the following format (place the princess in any spot you like):
 ```
@@ -73,7 +71,7 @@ p--m-
 ```
 rpsec
 ```
-* Hit enter until
+* Rspec will output test results
 
 ## Authors
 
