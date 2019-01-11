@@ -1,20 +1,36 @@
 #!/bin/ruby
 require 'pry'
 def displayPathtoPrincess(n,grid)
-  two_d_grid = []
-  m_position = nil
-  p_position = nil
+  m_position = []
+  p_position = []
   grid.each_with_index do |grid_line, index|
-    two_d_grid.push(split_grid = grid_line.split(''))
-    if split_grid.include?('m')
-      m_position = [index, split_grid.index('m')]
+    if grid_line.include?('m')
+      m_position = [index, grid_line.index('m')]
     end
-    if split_grid.include?('p')
-      p_position = [index, split_grid.index('p')]
+    if grid_line.include?('p')
+      p_position = [index, grid_line.index('p')]
     end
   end
-
-  binding.pry
+  output = ""
+    while m_position[0] != p_position[0]
+      if m_position[0] > p_position[0]
+        m_position[0] -= 1
+        output += "UP \n"
+      else
+        m_position[0] += 1
+         output += "DOWN \n"
+      end
+    end
+    while m_position[1] != p_position[1]
+      if m_position[1] > p_position[1]
+        m_position[1] -= 1
+        output += "LEFT \n"
+      else
+        m_position[1] += 1
+        output += "RIGHT \n"
+      end
+    end
+    print output
 end
 
 m = gets.to_i
