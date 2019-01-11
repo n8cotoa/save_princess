@@ -11,6 +11,29 @@ end
 def nextMove(n,r,c,grid)
     m_position = [r, c]
     p_position = getCharacterPosition('p', grid)
+    i = 0
+    until i == 2
+    while m_position[i] != p_position[i]
+      if m_position[i] > p_position[i]
+        m_position[i] -= 1
+        case i 
+        when 0
+          return "UP\n"
+        when 1
+          return "LEFT\n"
+        end
+      else
+        m_position[i] += 1
+        case i
+        when 0
+          return "DOWN\n"
+        when 1
+          return "RIGHT\n"
+        end
+      end
+    end
+    i += 1
+  end
 
   
 end
