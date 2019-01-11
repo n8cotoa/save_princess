@@ -12,23 +12,29 @@ def displayPathtoPrincess(n,grid)
     end
   end
   output = ""
-    while m_position[0] != p_position[0]
-      if m_position[0] > p_position[0]
-        m_position[0] -= 1
-        output += "UP \n"
-      else
-        m_position[0] += 1
-         output += "DOWN \n"
+
+    i = 0
+    until i == 2
+      while m_position[i] != p_position[i]
+        if m_position[i] > p_position[i]
+          m_position[i] -= 1
+          case i 
+          when 0
+            output += "UP \n"
+          when 1
+            output += "LEFT \n"
+          end
+        else
+          m_position[i] += 1
+          case i
+          when 0
+            output += "DOWN \n"
+          when 1
+            output += "RIGHT \n"
+          end
+        end
       end
-    end
-    while m_position[1] != p_position[1]
-      if m_position[1] > p_position[1]
-        m_position[1] -= 1
-        output += "LEFT \n"
-      else
-        m_position[1] += 1
-        output += "RIGHT \n"
-      end
+      i += 1
     end
     print output
 end
