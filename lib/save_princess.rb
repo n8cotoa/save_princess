@@ -1,16 +1,16 @@
 #!/bin/ruby
 require 'pry'
-def displayPathtoPrincess(n,grid)
-  m_position = []
-  p_position = []
+def getCharacterPosition(char, grid)
   grid.each_with_index do |grid_line, index|
-    if grid_line.include?('m')
-      m_position = [index, grid_line.index('m')]
-    end
-    if grid_line.include?('p')
-      p_position = [index, grid_line.index('p')]
+    if grid_line.include?(char)
+      return [index, grid_line.index(char)]
     end
   end
+end
+
+def displayPathtoPrincess(n,grid)
+  m_position = getCharacterPosition('m', grid)
+  p_position = getCharacterPosition('p', grid)
   output = ""
   i = 0
   until i == 2
