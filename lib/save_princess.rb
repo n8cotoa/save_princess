@@ -1,5 +1,4 @@
 #!/bin/ruby
-require 'pry'
 def getCharacterPosition(char, grid)
   grid.each_with_index do |grid_line, index|
     if grid_line.include?(char)
@@ -35,7 +34,6 @@ def displayPathtoPrincess(n,grid)
     end
     i += 1
   end
-  print output
   return output
 end
 
