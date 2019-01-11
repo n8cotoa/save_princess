@@ -34,8 +34,6 @@ def nextMove(n,r,c,grid)
     end
     i += 1
   end
-
-  
 end
 
 n = gets.to_i
@@ -48,4 +46,4 @@ grid = Array.new(n)
     grid[i] = gets
 end
 
-nextMove(n,r,c,grid)
+print nextMove(n,r,c,grid)
