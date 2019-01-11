@@ -45,8 +45,7 @@ ruby play_save_princess.rb
 p--
 ```
 * The terminal will output the moves to save the princess
-
-
+---
 * Go to project directory
 * To run 'Bot saves princess - 2, execute: 
 ```
