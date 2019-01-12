@@ -10,9 +10,26 @@ describe('#save_princess') do
         grid = ['---', '-m-', 'p--']
         expect(getCharacterPosition('p', grid)).to(eq([2,0]))
     end
-    it("returns path of bot to princess") do
-        m = 3
-        grid = ['---', '-m-', 'p--']
-        expect { displayPathtoPrincess(m,grid) }.to output("DOWN\nLEFT\n").to_stdout
+    context("returns path of bot to princess") do
+        it("when princess is in lower left corner") do
+            m = 3
+            grid = ['---', '-m-', 'p--']
+            expect { displayPathtoPrincess(m,grid) }.to output("DOWN\nLEFT\n").to_stdout
+        end
+        it("when princess is in lower right corner") do
+            m = 3
+            grid = ['---', '-m-', '--p']
+            expect { displayPathtoPrincess(m,grid) }.to output("DOWN\nRIGHT\n").to_stdout
+        end
+        it("when princess is in upper left corner") do
+            m = 3
+            grid = ['p--', '-m-', '---']
+            expect { displayPathtoPrincess(m,grid) }.to output("UP\nLEFT\n").to_stdout
+        end
+        it("when princess is in upper right corner") do
+            m = 3
+            grid = ['--p', '-m-', '---']
+            expect { displayPathtoPrincess(m,grid) }.to output("UP\nRIGHT\n").to_stdout
+        end
     end
 end
